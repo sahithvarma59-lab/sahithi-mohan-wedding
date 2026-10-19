@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahithi & Mohan Varma — A Celebration of Love</title>
+  <meta name="description" content="Sahithi & Mohan Varma invite you to celebrate their wedding on 23 December 2026 at 8:00 PM IST.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- ======================== OPENING SCREEN ======================== -->
+    <section id="opening-screen" class="screen active" aria-label="Opening screen">
+      <div class="paper-texture"></div>
+      <div class="gold-corners">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+      </div>
+
+      <!-- Floating gold particles -->
+      <div class="particles" id="particles"></div>
+
+      <div class="envelope-stage">
+        <div class="envelope-container" id="envelope-container" role="button" tabindex="0" aria-label="Tap the seal to open your invitation">
+          <div class="envelope" id="envelope">
+            <!-- Back panel -->
+            <div class="envelope-back"></div>
+            <!-- Inner holder -->
+            <div class="envelope-inner">
+              <!-- Invitation card inside envelope -->
+              <div class="invitation-card" id="invitation-card">
+                <div class="card-face">
+                  <div class="card-ornament top"></div>
+                  <div class="card-content">
+                    <h2 class="card-heading">A Celebration of Love</h2>
+                    <h1 class="card-names">Sahithi &amp; Mohan Varma</h1>
+                    <p class="card-lead">Together with our families, we invite you to celebrate the wedding of</p>
+                    <p class="card-couple">Sahithi &amp; Mohan Varma</p>
+                    <p class="card-poem">Two souls, one promise, and a lifetime of memories to begin.</p>
+                  </div>
+                  <div class="card-ornament bottom"></div>
+                </div>
+              </div>
+              <!-- Envelope flap (3D rotating) -->
+              <div class="envelope-flap" id="envelope-flap">
+                <div class="flap-inner"></div>
+              </div>
+            </div>
+            <!-- Wax seal -->
+            <div class="wax-seal-wrapper" id="wax-seal-wrapper">
+              <div class="wax-seal" id="wax-seal">S &amp; M</div>
+              <div class="seal-highlight"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="opening-content">
+          <h1 class="main-heading">A CELEBRATION OF LOVE</h1>
+          <p class="subtitle">An invitation for you</p>
+          <p class="instruction" id="instruction">Tap the seal to open your invitation</p>
+        </div>
+      </div>
+
+      <div class="floating-glow"></div>
+    </section>
+
+    <!-- ======================== INVITATION SCREEN ======================== -->
+    <section id="invitation-screen" class="screen" aria-hidden="true">
+      <div class="paper-texture"></div>
+      <div class="particles" id="invitation-particles"></div>
+      <div class="ambient-glow"></div>
+
+      <!-- Replay control -->
+      <button id="replay-btn" class="replay-btn" aria-label="Replay invitation">&#8634; Replay</button>
+
+      <!-- Luxury invitation card -->
+      <div class="invite-card-wrapper">
+        <div class="invite-card" id="invite-card">
+          <div class="card-border outer"></div>
+          <div class="card-border inner"></div>
+
+          <div class="card-face">
+            <!-- Ornamental dividers -->
+            <div class="ornament top"></div>
+            <div class="ornament bottom"></div>
+
+            <h1 class="couple-name bride">SAHITHI</h1>
+            <div class="ampersand">&amp;</div>
+            <h1 class="couple-name groom">MOHAN VARMA</h1>
+
+            <p class="invite-line-1">With the love and blessings of our families</p>
+            <p class="invite-line-2">We joyfully invite you to celebrate the beginning of our forever.</p>
+
+            <!-- Wedding details -->
+            <div class="details-section">
+              <div class="detail-item">
+                <span class="detail-label">23 DECEMBER 2026</span>
+                <span class="detail-value">Wednesday</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">8:00 PM IST</span>
+                <span class="detail-value">Time</span>
+              </div>
+              <div class="detail-item venue">
+                <span class="detail-label">VENUE</span>
+                <span class="detail-value">Venue details to be announced.</span>
+              </div>
+            </div>
+
+            <!-- Countdown -->
+            <div class="countdown-section">
+              <h3 class="countdown-heading">Until we celebrate</h3>
+              <div class="countdown" id="countdown" aria-live="polite" aria-label="Countdown to the wedding">
+                <div class="unit">
+                  <span class="value" id="days">00</span>
+                  <span class="label">DAYS</span>
+                </div>
+                <div class="unit">
+                  <span class="value" id="hours">00</span>
+                  <span class="label">HOURS</span>
+                </div>
+                <div class="unit">
+                  <span class="value" id="minutes">00</span>
+                  <span class="label">MINUTES</span>
+                </div>
+                <div class="unit">
+                  <span class="value" id="seconds">00</span>
+                  <span class="label">SECONDS</span>
+                </div>
+              </div>
+              <p id="countdown-message" class="countdown-message"></p>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-section">
+              <button id="music-btn" class="control-btn music-btn" aria-label="Toggle background music">Music: Off</button>
+              <button id="whatsapp-btn" class="control-btn whatsapp-btn" aria-label="Share on WhatsApp">Share on WhatsApp</button>
+              <button id="copy-btn" class="control-btn copy-btn" aria-label="Copy invitation link">Copy invitation link</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
